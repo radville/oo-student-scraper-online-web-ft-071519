@@ -4,10 +4,11 @@ require 'pry'
 class Scraper
 
   def self.scrape_index_page(index_url)
+    binding.pry
     doc = Nokogiri::HTML(open(index_url))
     students = doc.css(".student-card")
     students.each do |student|
-      name = student.css(".student-name")
+      name = student.css(".student-name").text
     end
   end
 
