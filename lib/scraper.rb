@@ -34,7 +34,6 @@ class Scraper
     hash[:profile_quote] = doc.css(".profile-quote").text unless !doc.css(".profile-quote").text
     hash[:bio] = doc.css(".description-holder p").text.gsub(/\s+/, ' ').strip unless !doc.css(".description-holder p").text
     hash
-      binding.pry
   end
 
 end
