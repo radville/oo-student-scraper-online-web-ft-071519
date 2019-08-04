@@ -30,10 +30,10 @@ class Scraper
       else
         hash[:blog] = link['href']
       end
+    end
     hash[:profile_quote] = doc.css(".profile-quote").text unless !doc.css(".profile-quote").text
     hash[:bio] = doc.css(".description-holder p").text.gsub(/\s+/, ' ').strip unless !doc.css(".description-holder p").text
     hash
   end
 
 end
-
