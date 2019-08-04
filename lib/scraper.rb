@@ -35,7 +35,6 @@ class Scraper
     hash[:bio] = doc.css(".description-holder p").text.gsub(/\s+/, ' ').strip unless !doc.css(".description-holder p").text
     hash
       binding.pry
-
   end
 
 end
